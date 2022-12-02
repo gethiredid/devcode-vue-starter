@@ -23,6 +23,18 @@ export default new Vuex.Store({
           return error;
         });
     },
+    async deleteContact(context, id) {
+      return await axios.delete(`${BASE_URL}/contacts/${id}`).catch((error) => {
+        return error;
+      });
+    },
+    async updateContactInfo(context, payload) {
+      return await axios
+        .put(`${BASE_URL}/contacts/${payload.id}`, payload.data)
+        .catch((error) => {
+          return error;
+        });
+    },
   },
   modules: {},
 });

@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <div class="container">
-      <input-contact-form title="Devcode Contact Manager" />
+      <input-contact-form
+        title="Devcode Contact Manager"
+        :selectedContact="selectedContact"
+        :isEdit="isEdit"
+      />
       <div class="contact-list__container">
         <contact-item
           v-for="contact in contactsData"

@@ -48,9 +48,15 @@ export default {
   name: "InputContactForm",
   props: {
     title: String,
+    selectedContact: Object,
+    isEdit: Boolean,
   },
   data() {
     return {
+      // eslint-disable-next-line
+      regexPhoneNumber: /^[0-9]*$/,
+      // eslint-disable-next-line
+      regexEmail: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
       input: {
         full_name: "",
         phone_number: "",
@@ -59,22 +65,32 @@ export default {
     };
   },
   watch: {
-    // Uncomment code below
-    // isEdit(val) {
-    //   if (val === true) {
-    //     this.input.full_name = this.selectedContact.full_name;
-    //     this.input.phone_number = this.selectedContact.phone_number;
-    //     this.input.email = this.selectedContact.email;
-    //   }
-    // },
+    isEdit(val) {
+      if (val === true) {
+        this.input.full_name = this.selectedContact.full_name;
+        this.input.phone_number = this.selectedContact.phone_number;
+        this.input.email = this.selectedContact.email;
+      }
+    },
   },
   methods: {
-   async onSubmit() {
-      await this.$store.dispatch("addNewContact", {
-        full_name: this.input.full_name,
-        phone_number: this.input.phone_number,
-        email: this.input.email,
-      });
+    async onSubmit() {
+      if (this.isEdit) {
+        await this.$store.dispatch("updateContactInfo", {
+          id: this.selectedContact.id,
+          data: {
+            full_name: this.input.full_name,
+            phone_number: this.input.phone_number,
+            email: this.input.email,
+          },
+        });
+      } else {
+        await this.$store.dispatch("addNewContact", {
+          full_name: this.input.full_name,
+          phone_number: this.input.phone_number,
+          email: this.input.email,
+        });
+      }
       this.resetInputValue();
       this.$parent.getAllContactsData();
     },
@@ -82,6 +98,7 @@ export default {
       this.input.full_name = "";
       this.input.phone_number = "";
       this.input.email = "";
+      this.$parent.resetSelectedData();
     },
   },
 };

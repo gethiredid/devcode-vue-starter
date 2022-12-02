@@ -3,14 +3,20 @@
     <div class="contact-item__first-row">
       <p data-cy="item-name" class="contact-item__name">{{ full_name }}</p>
       <div class="contact-item__button-wrapper">
-        <!-- Uncomment code below -->
-        <!-- <button
+        <button
+          data-cy="btn-edit"
+          class="contact-item__button contact-item__edit-button"
+          @click="onEdit"
+        >
+          Edit
+        </button>
+        <button
           data-cy="btn-delete"
           class="contact-item__button contact-item__delete-button"
           @click="onDelete"
         >
           Hapus
-        </button> -->
+        </button>
       </div>
     </div>
     <div class="contact-item__second-row">
@@ -31,7 +37,20 @@ export default {
     phone_number: String,
     email: String,
   },
-  methods: {},
+  methods: {
+    onEdit() {
+      this.$parent.setSelectedData(
+        this.id,
+        this.full_name,
+        this.phone_number,
+        this.email
+      );
+    },
+    async onDelete() {
+      await this.$store.dispatch("deleteContact", this.id);
+      this.$parent.getAllContactsData();
+    },
+  },
 };
 </script>
 
