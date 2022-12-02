@@ -1,24 +1,28 @@
 import Vue from "vue";
 import Vuex from "vuex";
-
-// Uncomment code below
-// import axios from "axios";
+import axios from "axios";
 
 Vue.use(Vuex);
 
-// Uncomment code below to use API base url
-// const BASE_URL = "https://api.contact-manager.project.skyshi.io";
+const BASE_URL = "https://api.contact-manager.project.skyshi.io";
 
 export default new Vuex.Store({
   state: {},
   getters: {},
   mutations: {},
   actions: {
+    async getAllContactsData() {
+      return await axios.get(`${BASE_URL}/contacts`).catch((error) => {
+        return error;
+      });
+    },
     // Uncomment code below
-    // async getAllContactsData() {
-    //   return await axios.get(`${BASE_URL}/contacts`).catch((error) => {
-    //     return error;
-    //   });
+    // async addNewContact(context, payload) {
+    //   return await axios
+    //     .post(`${BASE_URL}/contacts`, payload)
+    //     .catch((error) => {
+    //       return error;
+    //     });
     // },
   },
   modules: {},

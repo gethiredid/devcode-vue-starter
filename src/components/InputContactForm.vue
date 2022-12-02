@@ -27,7 +27,7 @@
         <input
           data-cy="input-email"
           v-model="input.email"
-          type="text"
+          type="email"
           name="email"
           placeholder="Masukkan Email"
         />
@@ -35,6 +35,7 @@
       <button
         data-cy="btn-submit"
         :disabled="!input.full_name || !input.phone_number || !input.email"
+        @click="onSubmit"
       >
         Simpan
       </button>
@@ -50,6 +51,10 @@ export default {
   },
   data() {
     return {
+      // eslint-disable-next-line
+      regexPhoneNumber: /^[0-9]*$/,
+      // eslint-disable-next-line
+      regexEmail: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
       input: {
         full_name: "",
         phone_number: "",
@@ -57,7 +62,33 @@ export default {
       },
     };
   },
-  methods: {},
+  methods: {
+    onSubmit() {},
+    // Uncomment code below
+    // validateData() {
+    //   if (!this.regexPhoneNumber.test(this.input.phone_number)) {
+    //     alert("Nomor telepon hanya dapat berupa angka.");
+    //   } else if (!this.regexEmail.test(this.input.email)) {
+    //     alert("Format email tidak sesuai.");
+    //   } else {
+    //     this.handleSubmit();
+    //   }
+    // },
+    async handleSubmit() {
+      // Uncomment code below
+      // await this.$store.dispatch("addNewContact", {
+      //   full_name: this.input.full_name,
+      //   phone_number: this.input.phone_number,
+      //   email: this.input.email,
+      // });
+      this.resetInputValue();
+    },
+    resetInputValue() {
+      this.input.full_name = "";
+      this.input.phone_number = "";
+      this.input.email = "";
+    },
+  },
 };
 </script>
 

@@ -3,15 +3,14 @@
     <div class="container">
       <input-contact-form title="Devcode Contact Manager" />
       <div class="contact-list__container">
-        <!-- Uncomment code below -->
-        <!-- <contact-item
+        <contact-item
           v-for="contact in contactsData"
           :key="contact.id"
           :id="contact.id"
           :full_name="contact.full_name"
           :phone_number="contact.phone_number"
           :email="contact.email"
-        /> -->
+        />
       </div>
     </div>
   </div>
@@ -20,34 +19,27 @@
 <script>
 // @ is an alias to /src
 import InputContactForm from "@/components/InputContactForm.vue";
-
-// Uncomment code below
-// import ContactItem from "@/components/ContactItem.vue";
+import ContactItem from "@/components/ContactItem.vue";
 
 export default {
-  name: "ContactManagerView",
+  name: "HomeView",
   components: {
     InputContactForm,
-
-    // Uncomment code below
-    // ContactItem,
+    ContactItem,
   },
   data() {
     return {
-      // Uncomment code below
-      // contactsData: [],
+      contactsData: [],
     };
   },
   mounted() {
-    // Uncomment code below
-    // this.getAllContactsData();
+    this.getAllContactsData();
   },
   methods: {
-    // Uncomment code below
-    // async getAllContactsData() {
-    //   const response = await this.$store.dispatch("getAllContactsData");
-    //   this.contactsData = response.data.data;
-    // },
+    async getAllContactsData() {
+      const response = await this.$store.dispatch("getAllContactsData");
+      this.contactsData = response.data.data;
+    },
   },
 };
 </script>
