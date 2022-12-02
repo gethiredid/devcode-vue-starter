@@ -9,7 +9,6 @@
 
 #app {
   font-family: "Poppins", sans-serif;
-  text-align: center;
 
   .router__btn {
     padding: 12px;
