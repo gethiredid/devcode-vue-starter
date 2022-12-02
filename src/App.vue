@@ -10,5 +10,13 @@
 #app {
   font-family: "Poppins", sans-serif;
   text-align: center;
+
+  .router__btn {
+    padding: 12px;
+    background: aqua;
+    color: #2c3e50;
+    text-decoration-line: none;
+    border-radius: 8px;
+  }
 }
 </style>

@@ -1,9 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
-
-// uncomment this code
-// import HelloView from "../views/HelloView.vue";
+import HelloView from "../views/HelloView.vue";
+import ContactManagerView from "../views/ContactManagerView.vue"
 
 Vue.use(VueRouter);
 
@@ -13,12 +12,16 @@ const routes = [
     name: "home",
     component: HomeView,
   },
-  // uncomment this code to create routing to hello page
-  // {
-  //   path: "/hello",
-  //   name: "hello",
-  //   component: HelloView,
-  // },
+  {
+    path: "/hello",
+    name: "hello",
+    component: HelloView,
+  },
+  {
+    path: "/contacts",
+    name: "contacts",
+    component: ContactManagerView,
+  },
 ];
 
 const router = new VueRouter({
