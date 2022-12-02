@@ -59,14 +59,14 @@ export default {
     };
   },
   methods: {
-    onSubmit() {
-      // Uncomment code below
-      // await this.$store.dispatch("addNewContact", {
-      //   full_name: this.input.full_name,
-      //   phone_number: this.input.phone_number,
-      //   email: this.input.email,
-      // });
+   async onSubmit() {
+      await this.$store.dispatch("addNewContact", {
+        full_name: this.input.full_name,
+        phone_number: this.input.phone_number,
+        email: this.input.email,
+      });
       this.resetInputValue();
+      this.$parent.getAllContactsData();
     },
     resetInputValue() {
       this.input.full_name = "";

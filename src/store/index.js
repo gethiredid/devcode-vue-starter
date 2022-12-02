@@ -16,14 +16,13 @@ export default new Vuex.Store({
         return error;
       });
     },
-    // Uncomment code below
-    // async addNewContact(context, payload) {
-    //   return await axios
-    //     .post(`${BASE_URL}/contacts`, payload)
-    //     .catch((error) => {
-    //       return error;
-    //     });
-    // },
+    async addNewContact(context, payload) {
+      return await axios
+        .post(`${BASE_URL}/contacts`, payload)
+        .catch((error) => {
+          return error;
+        });
+    },
   },
   modules: {},
 });

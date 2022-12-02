@@ -2,6 +2,16 @@
   <div data-cy="item-card" class="contact-item__wrapper">
     <div class="contact-item__first-row">
       <p data-cy="item-name" class="contact-item__name">{{ full_name }}</p>
+      <div class="contact-item__button-wrapper">
+        <!-- Uncomment code below -->
+        <!-- <button
+          data-cy="btn-delete"
+          class="contact-item__button contact-item__delete-button"
+          @click="onDelete"
+        >
+          Hapus
+        </button> -->
+      </div>
     </div>
     <div class="contact-item__second-row">
       <p class="contact-item__phone-email">
