@@ -30,12 +30,33 @@ export default {
   data() {
     return {
       contactsData: [],
+      selectedContact: {
+        id: 0,
+        full_name: "",
+        phone_number: "",
+        email: "",
+      },
+      isEdit: false,
     };
   },
   mounted() {
     this.getAllContactsData();
   },
   methods: {
+    setSelectedData(id, name, phone, email) {
+      this.selectedContact.id = id;
+      this.selectedContact.full_name = name;
+      this.selectedContact.phone_number = phone;
+      this.selectedContact.email = email;
+      this.isEdit = true;
+    },
+    resetSelectedData() {
+      this.selectedContact.id = 0;
+      this.selectedContact.full_name = "";
+      this.selectedContact.phone_number = "";
+      this.selectedContact.email = "";
+      this.isEdit = false;
+    },
     async getAllContactsData() {
       const response = await this.$store.dispatch("getAllContactsData");
       this.contactsData = response.data.data;

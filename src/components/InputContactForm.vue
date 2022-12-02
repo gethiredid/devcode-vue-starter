@@ -58,6 +58,16 @@ export default {
       },
     };
   },
+  watch: {
+    // Uncomment code below
+    // isEdit(val) {
+    //   if (val === true) {
+    //     this.input.full_name = this.selectedContact.full_name;
+    //     this.input.phone_number = this.selectedContact.phone_number;
+    //     this.input.email = this.selectedContact.email;
+    //   }
+    // },
+  },
   methods: {
    async onSubmit() {
       await this.$store.dispatch("addNewContact", {
