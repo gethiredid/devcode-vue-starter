@@ -16,7 +16,7 @@ export default new Vuex.Store({
         return error;
       });
     },
-    // Uncomment code below
+    // Uncomment baris kode dibawah untuk membuat sebuah fungsi yang akan mengirimkan data kontak baru ke API
     // async addNewContact(context, payload) {
     //   return await axios
     //     .post(`${BASE_URL}/contacts`, payload)
