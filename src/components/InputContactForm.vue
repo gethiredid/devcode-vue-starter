@@ -46,7 +46,7 @@
 <script>
 // Challenge yang harus dikerjakan pada file ini
 // 1. Buat props selectedContact dan isEdit
-// 2. Buat metode untuk dispatch fungsi ubah data kontak yang sudah dibuat sebelumnya di store/index.js
+// 2. Buat metode untuk dispatch fungsi ubah data kontak yang sudah dibuat sebelumnya di store/index.js di dalam fungsi onSubmit
 // 3. Pada fungsi onSubmit, buat percabangan dengan kondisi ketika isEdit bernilai true, maka jalankan fungsi ubah data kontak dan untuk sebaliknya, maka jalankan fungsi untuk tambah kontak baru
 
 export default {
