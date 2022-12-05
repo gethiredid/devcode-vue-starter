@@ -1,17 +1,17 @@
 <template>
   <div class="hello">
-    <!-- insert devcode logo source to img element -->
     <img
       data-cy="devcode-logo"
       src="../assets/devcode-logo.png"
       alt="devcode logo"
     />
     <div data-cy="devcode-title">
-      <!-- insert header element here -->
-      <h1>I’m ready for the next challenge!</h1>
+      <h1>I'm ready for the next challenge!</h1>
     </div>
     <div data-cy="router-button">
-      <router-link class="router__btn" to="/contacts">Level Selanjutnya</router-link>
+      <router-link class="router__btn" to="/contacts"
+        >Level Selanjutnya</router-link
+      >
     </div>
   </div>
 </template>

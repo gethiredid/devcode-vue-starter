@@ -3,7 +3,7 @@
     <div class="container">
       <input-contact-form title="Devcode Contact Manager" />
       <div class="contact-list__container">
-        <!-- Uncomment code below -->
+        <!-- Uncomment baris kode di bawah ini untuk menampilkan komponen ContactItem yang berisi data kontak sesuai dengan jumlah data kontak yang didapat dari API -->
         <!-- <contact-item
           v-for="contact in contactsData"
           :key="contact.id"
@@ -21,7 +21,7 @@
 // @ is an alias to /src
 import InputContactForm from "@/components/InputContactForm.vue";
 
-// Uncomment code below
+// Uncomment baris kode di bawah untuk meng-import komponen ContactItem
 // import ContactItem from "@/components/ContactItem.vue";
 
 export default {
@@ -29,21 +29,21 @@ export default {
   components: {
     InputContactForm,
 
-    // Uncomment code below
+    // Uncomment barus kode di bawah untuk menambahkan ContactItem sebagai komponen pada file ini
     // ContactItem,
   },
   data() {
     return {
-      // Uncomment code below
+      // Uncomment baris kode di bawah ini untuk membuat variabel baru sebagai wadah dari list data kontak yang akan diambil dari API
       // contactsData: [],
     };
   },
   mounted() {
-    // Uncomment code below
+    // Uncomment baris kode di bawah ini untuk memanggil fungsi getAllContactsData setelah halaman contacts selesai dirender
     // this.getAllContactsData();
   },
   methods: {
-    // Uncomment code below
+    // Uncomment baris kode di bawah ini untuk membuat fungsi getAllContactsData yang akan men-dispatch fungsi mengambil data kontak dari api yang sudah dibuat sebelumnya di store/index.js dan menyimpan data kontak ke dalam variabel contactsData
     // async getAllContactsData() {
     //   const response = await this.$store.dispatch("getAllContactsData");
     //   this.contactsData = response.data.data;
