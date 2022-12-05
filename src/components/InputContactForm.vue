@@ -44,6 +44,11 @@
 </template>
 
 <script>
+// Challenge yang harus dikerjakan pada file ini
+// 1. Buat props selectedContact dan isEdit
+// 2. Buat metode untuk dispatch fungsi ubah data kontak yang sudah dibuat sebelumnya di store/index.js
+// 3. Pada fungsi onSubmit, buat percabangan dengan kondisi ketika isEdit bernilai true, maka jalankan fungsi ubah data kontak dan untuk sebaliknya, maka jalankan fungsi untuk tambah kontak baru
+
 export default {
   name: "InputContactForm",
   props: {
@@ -59,7 +64,7 @@ export default {
     };
   },
   watch: {
-    // Uncomment code below
+    // Uncomment baris kode di bawah untuk mengisi input field dengan data kontak yang akan diubah ketika isEdit bernilai true
     // isEdit(val) {
     //   if (val === true) {
     //     this.input.full_name = this.selectedContact.full_name;
@@ -69,13 +74,14 @@ export default {
     // },
   },
   methods: {
-   async onSubmit() {
+    async onSubmit() {
       await this.$store.dispatch("addNewContact", {
         full_name: this.input.full_name,
         phone_number: this.input.phone_number,
         email: this.input.email,
       });
       this.resetInputValue();
+      this.$parent.resetSelectedData();
       this.$parent.getAllContactsData();
     },
     resetInputValue() {

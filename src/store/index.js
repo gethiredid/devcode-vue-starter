@@ -23,6 +23,10 @@ export default new Vuex.Store({
           return error;
         });
     },
+
+    // Challenge yang harus dikerjakan pada file ini
+    // 1. Buat sebuah fungsi untuk menghapus data kontak dengan mengirimkan id dari kontak yang akan dihapus ke API, axios method yang digunakan adalah delete
+    // 2. Buat sebuah fungsi untuk mengubah data kontak dengan mengirimkan id dari kontak yang akan diubah beserta dengan data perubahan terbaru dari kontak tersebut ke API, axios method yang digunakan adalah put
   },
   modules: {},
 });

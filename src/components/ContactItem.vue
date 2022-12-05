@@ -2,16 +2,7 @@
   <div data-cy="item-card" class="contact-item__wrapper">
     <div class="contact-item__first-row">
       <p data-cy="item-name" class="contact-item__name">{{ full_name }}</p>
-      <div class="contact-item__button-wrapper">
-        <!-- Uncomment code below -->
-        <!-- <button
-          data-cy="btn-delete"
-          class="contact-item__button contact-item__delete-button"
-          @click="onDelete"
-        >
-          Hapus
-        </button> -->
-      </div>
+      <div class="contact-item__button-wrapper"></div>
     </div>
     <div class="contact-item__second-row">
       <p class="contact-item__phone-email">
@@ -23,6 +14,12 @@
 </template>
 
 <script>
+// Challenge yang harus dikerjakan pada file ini
+// 1. Buat sebuah fungsi untuk men-dispatch fungsi menghapus kontak yang sudah dibuat sebelumnya di store/index.js
+// 2. Buat button edit dengan properti data-cy nya btn-edit, class nya contact-item__button dan contact-item__edit-button serta menjalankan fungsi setSelectedData yang ada di halaman ContactManagerView ketika di klik
+// 3. Buat button hapus dengan properti data-cy nya btn-delete, class nya contact-item__button dan contact-item__delete-button serta menjalankan fungsi menghapus kontak yang sudah dibuat sebelumnya ketika di klik
+// 4. Kedua button tersebut dibuat di dalam elemen div dengan class contact-item__button-wrapper
+
 export default {
   name: "ContactItem",
   props: {
