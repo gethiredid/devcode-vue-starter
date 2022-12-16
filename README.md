@@ -2,9 +2,11 @@
 
 ## Hasil Akhir yang Diharapkan
 
-Peserta dapat mengubah dan menghapus data kontak yang sudah ada lalu menampilkan perubahannya pada list kontak
+Peserta dapat mengubah dan menghapus data kontak yang sudah ada lalu menampilkan perubahannya pada list kontak.
 
-## Instruksi Pengerjaan
+Untuk contoh hasil akhir yang sudah dibuat, bisa diakses [disini](https://devcode-vue-starter-level-4.vercel.app/)
+
+## Setup Environment
 
 1. Download source code melalui link yang telah disediakan dari halaman assesment
 2. Extract source code yang sudah terdownload pada perangkat anda
@@ -12,10 +14,13 @@ Peserta dapat mengubah dan menghapus data kontak yang sudah ada lalu menampilkan
 4. Jalankan `npm install` pada terminal
 5. Jalankan `npm run serve` pada terminal
 6. Akses `localhost:8080` pada browser
-7. Selesaikan challenge yang terdapat pada file `store/index.js`, `ContactManagerView.vue`, `InputContactForm.vue`, `ContactItem.vue`
-8. Buat online repository di Github (Jika belum memiliki akun Github, silahkan daftar [disini](https://github.com/signup))
-9. Push project ke online repository yang sudah anda buat
-10. Deploy project ini ke Hosting yang anda miliki atau bisa juga menggunakan layanan hosting gratis seperti Vercel (Jika belum memiliki akun Vercel, silahkan daftar [disini](https://vercel.com/signup))
+
+## Instruksi Pengerjaan
+
+1. Selesaikan challenge yang terdapat pada file `store/index.js`, `ContactManagerView.vue`, `InputContactForm.vue`, `ContactItem.vue`
+2. Buat online repository di Github (Jika belum memiliki akun Github, silahkan daftar [disini](https://github.com/signup))
+3. Push project ke online repository yang sudah anda buat
+4. Deploy project ini ke Hosting yang anda miliki atau bisa juga menggunakan layanan hosting gratis seperti Vercel (Jika belum memiliki akun Vercel, silahkan daftar [disini](https://vercel.com/signup))
 
 ## Teknologi yang Digunakan
 
