@@ -4,8 +4,6 @@
 
 Peserta dapat mengubah dan menghapus data kontak yang sudah ada lalu menampilkan perubahannya pada list kontak.
 
-Untuk contoh hasil akhir yang sudah dibuat, bisa diakses [disini](https://devcode-vue-starter-level-4.vercel.app/)
-
 ## Setup Environment
 
 1. Download source code melalui link yang telah disediakan dari halaman assesment
