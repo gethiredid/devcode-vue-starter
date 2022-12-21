@@ -44,7 +44,7 @@
 </template>
 
 <script>
-// Challenge yang harus dikerjakan pada file ini
+// TODO:
 // 1. Buat sebuah fungsi yang akan memvalidasi apakah format dari nomor telepon dan email yang dimasukkan sudah benar atau belum
 // 2. Jika format nomor telepon salah, maka tampilkan sebuah alert dengan isi pesan "Nomor telepon hanya dapat berupa angka."
 // 3. Jika format email salah, maka tampilkan sebuah alert dengan isi pesan "Format email tidak sesuai."
@@ -60,10 +60,10 @@ export default {
   data() {
     return {
       // eslint-disable-next-line
-      // Uncomment baris kode di bawah untuk membuat regex yang akan membantu memvalidasi format nomor telepon
+      // TODO: Uncomment baris kode di bawah untuk membuat regex yang akan membantu memvalidasi format nomor telepon
       // regexPhoneNumber: /^[0-9]*$/,
       // eslint-disable-next-line
-      // Uncomment baris kode di bawah untuk membuat regex yang akan membantu memvalidasi format  email
+      // TODO: Uncomment baris kode di bawah untuk membuat regex yang akan membantu memvalidasi format  email
       // regexEmail: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
       input: {
         full_name: "",
