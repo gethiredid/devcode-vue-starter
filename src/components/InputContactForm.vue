@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     async onSubmit() {
-      // Uncomment baris kode di bawah untuk men-dispatch fungsi mengirim data kontak baru yang sudah dibuat sebelumnya di store/index.js lalu panggil fungsi untuk mengambil semua data kontak dari api dan mereset value yang ada di setiap input field
+      // TODO: Uncomment baris kode di bawah untuk men-dispatch fungsi mengirim data kontak baru yang sudah dibuat sebelumnya di store/index.js lalu panggil fungsi untuk mengambil semua data kontak dari api dan mereset value yang ada di setiap input field
       // await this.$store.dispatch("addNewContact", {
       //   full_name: this.input.full_name,
       //   phone_number: this.input.phone_number,
