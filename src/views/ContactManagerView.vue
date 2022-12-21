@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="container">
-      <!-- Tambahkan selectedContact dan isEdit sebagai props pada komponen InputContactForm -->
+      <!-- TODO: Tambahkan selectedContact dan isEdit sebagai props pada komponen InputContactForm -->
       <input-contact-form title="Devcode Contact Manager" />
       <div class="contact-list__container">
         <contact-item
